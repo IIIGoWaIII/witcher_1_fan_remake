@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bfw2brgkg5ib2"]
+
+[ext_resource type="Script" uid="uid://dqup7q7kwvo4l" path="res://scripts/player.gd" id="1_f0p7x"]
+[ext_resource type="PackedScene" uid="uid://pya51ybjpo7q" path="res://characters/geralt/geralt.glb" id="1_yldxj"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_f0p7x"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vtm10"]
+
+[sub_resource type="Environment" id="Environment_yldxj"]
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+glow_enabled = true
+fog_enabled = true
+adjustment_enabled = true
+adjustment_brightness = 0.85
+adjustment_contrast = 1.07
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_f0p7x"]
+
+[sub_resource type="Compositor" id="Compositor_vtm10"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yldxj"]
+radius = 0.25732422
+height = 1.6273804
+
+[node name="Node3D" type="Node3D" unique_id=2008223117]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=33120486]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=995398042]
+shape = SubResource("WorldBoundaryShape3D_f0p7x")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1175213427]
+transform = Transform3D(8.04, 0, 0, 0, 8.04, 0, 0, 0, 8.04, 0, 0, 0)
+mesh = SubResource("PlaneMesh_vtm10")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2115822366]
+transform = Transform3D(0.71475345, 0.54764915, 0.43498024, 0.31202745, -0.80632925, 0.50246584, 0.62591225, -0.2234135, -0.74720824, 0.93270755, 2.407508, 0)
+shadow_enabled = true
+shadow_blur = 0.755
+directional_shadow_split_1 = 0.03
+directional_shadow_split_2 = 0.107
+directional_shadow_split_3 = 0.437
+directional_shadow_blend_splits = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1001454289]
+environment = SubResource("Environment_yldxj")
+camera_attributes = SubResource("CameraAttributesPractical_f0p7x")
+compositor = SubResource("Compositor_vtm10")
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=1289120890]
+script = ExtResource("1_f0p7x")
+
+[node name="geralt" parent="Player" unique_id=1714212613 instance=ExtResource("1_yldxj")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=2084081431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8530011, 0)
+shape = SubResource("CapsuleShape3D_yldxj")
+
+[node name="Head" type="Node3D" parent="Player" unique_id=1277088549]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5238149, -0.16627425)
+
+[node name="FPS_Camera" type="Camera3D" parent="Player/Head" unique_id=1093040257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0690406)
+
+[node name="CamPivot" type="Node3D" parent="Player" unique_id=573644024]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2296325, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Player/CamPivot" unique_id=515251706]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.555, 0.005, 0.405)
+
+[node name="TPS_Camera" type="Camera3D" parent="Player/CamPivot/SpringArm3D" unique_id=1768512798]
+fov = 55.0
