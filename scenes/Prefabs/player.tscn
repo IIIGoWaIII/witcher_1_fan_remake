@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://clxcmalapihtr"]
+
+[ext_resource type="Script" uid="uid://dqup7q7kwvo4l" path="res://scripts/player.gd" id="1_wabmd"]
+[ext_resource type="PackedScene" uid="uid://pya51ybjpo7q" path="res://characters/geralt/geralt.glb" id="2_ig8p6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yldxj"]
+radius = 0.25732422
+height = 1.6273804
+
+[node name="Player" type="CharacterBody3D" unique_id=1559639367]
+script = ExtResource("1_wabmd")
+
+[node name="geralt" parent="." unique_id=1714212613 instance=ExtResource("2_ig8p6")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1980983315]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8530011, 0)
+shape = SubResource("CapsuleShape3D_yldxj")
+
+[node name="Head" type="Node3D" parent="." unique_id=1601329862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5238149, -0.16627425)
+
+[node name="FPS_Camera" type="Camera3D" parent="Head" unique_id=73431443]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0690406)
+
+[node name="CamPivot" type="Node3D" parent="." unique_id=1560400568]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2296325, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CamPivot" unique_id=1399211772]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.555, 0.005, 0.405)
+
+[node name="TPS_Camera" type="Camera3D" parent="CamPivot/SpringArm3D" unique_id=973292849]
+fov = 55.0
