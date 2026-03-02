@@ -3,7 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://clxcmalapihtr" path="res://scenes/Prefabs/player.tscn" id="1_rk4eo"]
 [ext_resource type="Texture2D" uid="uid://c5om2aq3hdvho" path="res://scenes/textures/grass/Poliigon_GrassPatchyGround_4585_BaseColor.jpg" id="2_halh1"]
 [ext_resource type="Texture2D" uid="uid://ck40f2ik5lxfr" path="res://scenes/textures/grass/packed_normal_roughness.png" id="3_halh1"]
-[ext_resource type="PackedScene" uid="uid://dl5u7v4p5a3aj" path="res://assets/blueprints/vizima_south_gate_blueprint.glb" id="4_1wmyi"]
+[ext_resource type="PackedScene" uid="uid://dp6mcbqya5kde" path="res://assets/blueprints/vizima_outskirts_01_blueprint.glb" id="4_gwh7h"]
+[ext_resource type="PackedScene" uid="uid://bbv5dvdyfhwha" path="res://assets/blueprints/vizima_outskirts_02_blueprint.glb" id="5_kxibv"]
 
 [sub_resource type="Environment" id="Environment_1wmyi"]
 ssr_enabled = true
@@ -95,6 +96,7 @@ texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_
 [node name="VizimaOutskirts" type="Node3D" unique_id=311336467]
 
 [node name="Player" parent="." unique_id=1559639367 instance=ExtResource("1_rk4eo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.861965, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=490697273]
 transform = Transform3D(0.71475345, 0.54764915, 0.43498024, 0.31202745, -0.80632925, 0.50246584, 0.62591225, -0.2234135, -0.74720824, 0.93270755, 2.407508, 0)
@@ -117,5 +119,18 @@ assets = SubResource("Terrain3DAssets_30ihy")
 top_level = true
 metadata/_edit_lock_ = true
 
-[node name="vizima_south_gate_blueprint" parent="." unique_id=1077083323 instance=ExtResource("4_1wmyi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.68116736, 1.7686176, 18.855553)
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1169255965]
+transform = Transform3D(1, 0, 0, 0, -0.18907826, 0.9819621, 0, -0.9819621, -0.18907826, -1.6445642, 0.9757669, -1.8972754)
+light_energy = 16.0
+shadow_enabled = true
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=2034771274]
+transform = Transform3D(1, 0, 0, 0, -0.18907826, 0.9819621, 0, -0.9819621, -0.18907826, -5.5270653, 0.9757669, -1.8972754)
+light_energy = 16.0
+shadow_enabled = true
+
+[node name="vizima_outskirts_01_blueprint" parent="." unique_id=38114687 instance=ExtResource("4_gwh7h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.681707, 0)
+
+[node name="vizima_outskirts_02_blueprint" parent="." unique_id=1783854656 instance=ExtResource("5_kxibv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.90461, 0)
