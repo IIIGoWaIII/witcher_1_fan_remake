@@ -1,9 +1,11 @@
-[gd_scene format=3 uid="uid://dyidvng5sc28b"]
+[gd_scene format=3 uid="uid://dvx1ywo8pmf6l"]
 
 [ext_resource type="PackedScene" uid="uid://clxcmalapihtr" path="res://scenes/Prefabs/player.tscn" id="1_rk4eo"]
 [ext_resource type="Texture2D" uid="uid://c5om2aq3hdvho" path="res://scenes/textures/grass/Poliigon_GrassPatchyGround_4585_BaseColor.jpg" id="2_halh1"]
 [ext_resource type="Texture2D" uid="uid://ck40f2ik5lxfr" path="res://scenes/textures/grass/packed_normal_roughness.png" id="3_halh1"]
+[ext_resource type="Texture2D" uid="uid://dfxltegurk07h" path="res://scenes/textures/dirt/GroundDirtWeedsPatchy004_COL_2K.jpg" id="4_30ihy"]
 [ext_resource type="PackedScene" uid="uid://dp6mcbqya5kde" path="res://assets/blueprints/vizima_outskirts_01_blueprint.glb" id="4_gwh7h"]
+[ext_resource type="Texture2D" uid="uid://dd5ba0pmqrxhr" path="res://scenes/textures/dirt/packed_normal_roughness.png" id="5_4xpc3"]
 [ext_resource type="PackedScene" uid="uid://bbv5dvdyfhwha" path="res://assets/blueprints/vizima_outskirts_02_blueprint.glb" id="5_kxibv"]
 
 [sub_resource type="Environment" id="Environment_1wmyi"]
@@ -13,7 +15,7 @@ ssil_enabled = true
 sdfgi_enabled = true
 sdfgi_use_occlusion = true
 glow_enabled = true
-fog_enabled = true
+fog_sun_scatter = 0.1
 adjustment_enabled = true
 adjustment_brightness = 0.85
 adjustment_contrast = 1.07
@@ -89,9 +91,17 @@ uv_scale = 0.2
 detiling_rotation = 0.113
 detiling_shift = 0.078
 
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_vl66m"]
+name = "GroundDirtWeedsPatchy004_COL_2K"
+id = 1
+albedo_texture = ExtResource("4_30ihy")
+normal_texture = ExtResource("5_4xpc3")
+roughness = 0.372
+uv_scale = 0.2
+
 [sub_resource type="Terrain3DAssets" id="Terrain3DAssets_30ihy"]
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_kxibv")])
-texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_gwh7h")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_gwh7h"), SubResource("Terrain3DTextureAsset_vl66m")])
 
 [node name="VizimaOutskirts" type="Node3D" unique_id=311336467]
 
@@ -99,7 +109,7 @@ texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.861965, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=490697273]
-transform = Transform3D(0.71475345, 0.54764915, 0.43498024, 0.31202745, -0.80632925, 0.50246584, 0.62591225, -0.2234135, -0.74720824, 0.93270755, 2.407508, 0)
+transform = Transform3D(0.7147535, 0.54764915, 0.43498027, 0.19720538, -0.75453454, 0.6259295, 0.6709973, -0.36160484, -0.6473056, 0.93270755, 13.841548, 0)
 shadow_enabled = true
 shadow_blur = 0.755
 directional_shadow_split_1 = 0.03
@@ -118,16 +128,6 @@ material = SubResource("Terrain3DMaterial_1wmyi")
 assets = SubResource("Terrain3DAssets_30ihy")
 top_level = true
 metadata/_edit_lock_ = true
-
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1169255965]
-transform = Transform3D(1, 0, 0, 0, -0.18907826, 0.9819621, 0, -0.9819621, -0.18907826, -1.6445642, 0.9757669, -1.8972754)
-light_energy = 16.0
-shadow_enabled = true
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=2034771274]
-transform = Transform3D(1, 0, 0, 0, -0.18907826, 0.9819621, 0, -0.9819621, -0.18907826, -5.5270653, 0.9757669, -1.8972754)
-light_energy = 16.0
-shadow_enabled = true
 
 [node name="vizima_outskirts_01_blueprint" parent="." unique_id=38114687 instance=ExtResource("4_gwh7h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.681707, 0)
