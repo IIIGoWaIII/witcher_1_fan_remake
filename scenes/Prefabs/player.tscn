@@ -71,26 +71,27 @@ visible = false
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
 
 [node name="Skeleton3D" parent="geralt_anim_testglb/Armature" parent_id_path=PackedInt32Array(769396537, 59102032) index="0" unique_id=2142098723]
-bones/1/position = Vector3(0.05217588, 0.8411418, -0.05112946)
-bones/1/rotation = Quaternion(-0.0053023514, -0.048572425, -0.025954789, 0.9984684)
-bones/2/rotation = Quaternion(-0.050309807, 0.0034155136, 0.0135253295, 0.99863625)
-bones/3/rotation = Quaternion(0.020912653, 0.0054111863, 0.027467137, 0.9993893)
-bones/4/rotation = Quaternion(0.0209127, 0.005411179, 0.027467137, 0.9993893)
-bones/5/rotation = Quaternion(-0.030133996, 0.0014991584, 0.0039180997, 0.99953705)
-bones/6/rotation = Quaternion(0.03743926, 0.009933337, -0.045830492, 0.99819803)
-bones/8/rotation = Quaternion(0.66389555, 0.33732477, -0.5154681, 0.42396644)
-bones/9/rotation = Quaternion(0.42046288, 0.23491703, 0.09503028, 0.8712027)
-bones/10/rotation = Quaternion(-0.015458859, -0.0037931935, 0.07146626, 0.99731606)
-bones/12/rotation = Quaternion(0.52086204, -0.44383913, 0.6241303, 0.3770558)
-bones/13/rotation = Quaternion(0.4250581, -0.22288619, -0.0928271, 0.87237066)
-bones/14/rotation = Quaternion(0.023515275, 0.0025864367, -0.07779205, 0.9966889)
-bones/16/rotation = Quaternion(0.025581855, 0.10856177, 0.9898049, -0.088578805)
-bones/17/rotation = Quaternion(-0.16793802, 0.0011101955, -0.038764667, 0.9850345)
-bones/18/rotation = Quaternion(0.45941508, -0.28119367, 0.16669053, 0.82588273)
-bones/19/rotation = Quaternion(0.3043579, -0.07700609, 0.03908223, 0.94863534)
-bones/21/rotation = Quaternion(-0.05671057, 0.021416552, 0.9971649, -0.04458021)
-bones/22/rotation = Quaternion(-0.12595786, -0.00031102763, 0.035953067, 0.9913839)
-bones/23/rotation = Quaternion(0.51642936, 0.19348949, -0.20040467, 0.8097535)
+bones/1/position = Vector3(0.052587308, 0.8412033, -0.04970808)
+bones/1/rotation = Quaternion(-0.0066369977, -0.045719225, -0.023992253, 0.9986442)
+bones/2/rotation = Quaternion(-0.051311426, 0.0042206445, 0.013193997, 0.9985866)
+bones/3/rotation = Quaternion(0.018478869, 0.0070472173, 0.02689412, 0.99944264)
+bones/4/rotation = Quaternion(0.018478934, 0.0070472104, 0.026894115, 0.99944264)
+bones/5/rotation = Quaternion(-0.03298272, -0.0008853729, 0.0022529892, 0.99945307)
+bones/6/position = Vector3(0, 0.09, 0.012)
+bones/6/rotation = Quaternion(0.031977385, 0.006770411, -0.04558975, 0.99842536)
+bones/8/rotation = Quaternion(0.6648552, 0.33613357, -0.51526767, 0.42365208)
+bones/9/rotation = Quaternion(0.4231614, 0.2491414, 0.070535816, 0.8682671)
+bones/10/rotation = Quaternion(-0.025852352, -0.007022075, 0.11828371, 0.9926185)
+bones/12/rotation = Quaternion(0.51721895, -0.4468231, 0.62445337, 0.37801024)
+bones/13/rotation = Quaternion(0.407351, -0.24445231, -0.06680747, 0.87740815)
+bones/14/rotation = Quaternion(0.043697268, 0.005529405, -0.1475585, 0.9880721)
+bones/16/rotation = Quaternion(0.026119724, 0.10664644, 0.99016666, -0.08668493)
+bones/17/rotation = Quaternion(-0.16650851, 0.0010779126, -0.038707778, 0.9852794)
+bones/18/rotation = Quaternion(0.45943606, -0.27820608, 0.16628717, 0.8269635)
+bones/19/rotation = Quaternion(0.30476734, -0.082416, 0.043153994, 0.94787246)
+bones/21/rotation = Quaternion(-0.056542292, 0.022519419, 0.99726784, -0.041867983)
+bones/22/rotation = Quaternion(-0.13245486, -0.00029291658, 0.03619292, 0.990528)
+bones/23/rotation = Quaternion(0.5190479, 0.19755813, -0.2007451, 0.8070078)
 bones/24/rotation = Quaternion(0.34573874, 0.08648351, -0.021317124, 0.9340937)
 
 [node name="AnimationPlayer" parent="geralt_anim_testglb" index="1" unique_id=1588642269]
@@ -104,10 +105,6 @@ anim_player = NodePath("../geralt_anim_testglb/AnimationPlayer")
 parameters/conditions/idle = false
 parameters/conditions/movement = false
 parameters/Walk/blend_position = Vector2(-0.003088832, -0.028213143)
-
-[node name="RootMotionView" type="RootMotionView" parent="." unique_id=874324356]
-transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
-animation_path = NodePath("../AnimationTree")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1980983315]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8530011, 0)

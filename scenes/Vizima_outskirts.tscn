@@ -15,6 +15,7 @@ ssil_enabled = true
 sdfgi_enabled = true
 sdfgi_use_occlusion = true
 glow_enabled = true
+fog_enabled = true
 fog_sun_scatter = 0.1
 adjustment_enabled = true
 adjustment_brightness = 0.85
