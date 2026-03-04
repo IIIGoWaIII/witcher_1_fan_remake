@@ -18,7 +18,7 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	# Get references from the parent Player node
 	player = get_parent()
-	model = player.get_node("geralt")
+	model = player.get_node("geralt_anim_testglb")
 	
 	# Ensure base rotations start with your -180 offset applied
 	head.rotation.y = Y_OFFSET
