@@ -40,11 +40,12 @@ animation = &"idle"
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wd0ba"]
-xfade_time = 0.2
+xfade_time = 0.5
 advance_mode = 2
 advance_condition = &"movement"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rjgie"]
+xfade_time = 0.5
 advance_mode = 2
 advance_condition = &"idle"
 
@@ -70,26 +71,26 @@ visible = false
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
 
 [node name="Skeleton3D" parent="geralt_anim_testglb/Armature" parent_id_path=PackedInt32Array(769396537, 59102032) index="0" unique_id=2142098723]
-bones/1/position = Vector3(0.054319862, 0.84131235, -0.05097999)
-bones/1/rotation = Quaternion(-0.007141987, -0.046389583, -0.027353289, 0.99852335)
-bones/2/rotation = Quaternion(-0.05124976, 0.0028237747, 0.013595331, 0.99858934)
-bones/3/rotation = Quaternion(0.018450877, 0.003753077, 0.027875366, 0.9994341)
-bones/4/rotation = Quaternion(0.018450934, 0.0037530642, 0.027875379, 0.9994342)
-bones/5/rotation = Quaternion(-0.034017783, -0.002118905, 0.0079154065, 0.99938774)
-bones/6/rotation = Quaternion(0.028504081, 0.008336647, -0.050034914, 0.9983059)
-bones/8/rotation = Quaternion(0.6641819, 0.33712736, -0.51493645, 0.4243208)
-bones/9/rotation = Quaternion(0.42120904, 0.260271, 0.0566359, 0.8669685)
-bones/10/rotation = Quaternion(-0.033060998, -0.008937005, 0.14983743, 0.98811734)
-bones/12/rotation = Quaternion(0.51744926, -0.44613868, 0.6262807, 0.37547177)
-bones/13/rotation = Quaternion(0.39952207, -0.2527678, -0.054934163, 0.879473)
-bones/14/rotation = Quaternion(0.050252266, 0.005559101, -0.17164755, 0.9838603)
-bones/16/rotation = Quaternion(0.024958106, 0.1074842, 0.98994756, -0.088477544)
-bones/17/rotation = Quaternion(-0.16967957, 0.0009891944, -0.038839497, 0.98473316)
-bones/18/rotation = Quaternion(0.46034694, -0.28001252, 0.16612063, 0.8258799)
-bones/19/rotation = Quaternion(0.30572787, -0.0811541, 0.04326938, 0.9476668)
-bones/21/rotation = Quaternion(-0.05729683, 0.018074822, 0.9971992, -0.04454526)
-bones/22/rotation = Quaternion(-0.122507066, -0.0003860091, 0.035724763, 0.9918244)
-bones/23/rotation = Quaternion(0.51445514, 0.19563833, -0.19990988, 0.8106156)
+bones/1/position = Vector3(0.05217588, 0.8411418, -0.05112946)
+bones/1/rotation = Quaternion(-0.0053023514, -0.048572425, -0.025954789, 0.9984684)
+bones/2/rotation = Quaternion(-0.050309807, 0.0034155136, 0.0135253295, 0.99863625)
+bones/3/rotation = Quaternion(0.020912653, 0.0054111863, 0.027467137, 0.9993893)
+bones/4/rotation = Quaternion(0.0209127, 0.005411179, 0.027467137, 0.9993893)
+bones/5/rotation = Quaternion(-0.030133996, 0.0014991584, 0.0039180997, 0.99953705)
+bones/6/rotation = Quaternion(0.03743926, 0.009933337, -0.045830492, 0.99819803)
+bones/8/rotation = Quaternion(0.66389555, 0.33732477, -0.5154681, 0.42396644)
+bones/9/rotation = Quaternion(0.42046288, 0.23491703, 0.09503028, 0.8712027)
+bones/10/rotation = Quaternion(-0.015458859, -0.0037931935, 0.07146626, 0.99731606)
+bones/12/rotation = Quaternion(0.52086204, -0.44383913, 0.6241303, 0.3770558)
+bones/13/rotation = Quaternion(0.4250581, -0.22288619, -0.0928271, 0.87237066)
+bones/14/rotation = Quaternion(0.023515275, 0.0025864367, -0.07779205, 0.9966889)
+bones/16/rotation = Quaternion(0.025581855, 0.10856177, 0.9898049, -0.088578805)
+bones/17/rotation = Quaternion(-0.16793802, 0.0011101955, -0.038764667, 0.9850345)
+bones/18/rotation = Quaternion(0.45941508, -0.28119367, 0.16669053, 0.82588273)
+bones/19/rotation = Quaternion(0.3043579, -0.07700609, 0.03908223, 0.94863534)
+bones/21/rotation = Quaternion(-0.05671057, 0.021416552, 0.9971649, -0.04458021)
+bones/22/rotation = Quaternion(-0.12595786, -0.00031102763, 0.035953067, 0.9913839)
+bones/23/rotation = Quaternion(0.51642936, 0.19348949, -0.20040467, 0.8097535)
 bones/24/rotation = Quaternion(0.34573874, 0.08648351, -0.021317124, 0.9340937)
 
 [node name="AnimationPlayer" parent="geralt_anim_testglb" index="1" unique_id=1588642269]

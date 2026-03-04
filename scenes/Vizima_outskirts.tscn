@@ -107,6 +107,7 @@ texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_
 
 [node name="Player" parent="." unique_id=1559639367 instance=ExtResource("1_rk4eo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.861965, 0)
+blend_speed = 6.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=490697273]
 transform = Transform3D(0.7147535, 0.54764915, 0.43498027, 0.19720538, -0.75453454, 0.6259295, 0.6709973, -0.36160484, -0.6473056, 0.93270755, 13.841548, 0)

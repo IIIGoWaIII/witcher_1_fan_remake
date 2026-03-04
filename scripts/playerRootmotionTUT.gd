@@ -4,6 +4,8 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
+@export var blend_speed = 2.0
+
 
 func _physics_process(delta: float) -> void:
 	# 1. Gravity
@@ -36,14 +38,20 @@ func _physics_process(delta: float) -> void:
 	# 5. Animation State & BlendSpace
 	# Scale blend input so forward maps to walk (-0.5) or sprint (-1.0).
 	# Without this, raw input_dir.y = -1 always hits the sprint blend point.
-	var blend_input = input_dir
-	if not is_sprinting and blend_input.y < 0.0:
-		blend_input.y *= 0.5
+	var blend_target = input_dir
+	if not is_sprinting and blend_target.y < 0.0:
+		blend_target.y *= 0.5
+	
+	# Lerp the blend position for smooth transitions between directions and walk/sprint.
+	# blend_speed controls how fast it blends (2.0 = ~0.5s to fully transition).
+	
+	var current_blend: Vector2 = $AnimationTree.get("parameters/Walk/blend_position")
+	var new_blend = current_blend.lerp(blend_target, blend_speed * delta)
 	
 	var direction := (transform.basis * Vector3(-input_dir.x, 0, -input_dir.y)).normalized()
 	$AnimationTree.set("parameters/conditions/movement", direction != Vector3.ZERO)
 	$AnimationTree.set("parameters/conditions/idle", direction == Vector3.ZERO)
-	$AnimationTree.set("parameters/Walk/blend_position", blend_input)
+	$AnimationTree.set("parameters/Walk/blend_position", new_blend)
 	
 	# 6. Root Motion: only apply horizontal velocity, preserve Y for gravity/jump
 	var currentRotation = transform.basis.get_rotation_quaternion()
