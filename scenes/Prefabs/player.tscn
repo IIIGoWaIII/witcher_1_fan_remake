@@ -1,82 +1,134 @@
 [gd_scene format=3 uid="uid://clxcmalapihtr"]
 
-[ext_resource type="Script" uid="uid://dqup7q7kwvo4l" path="res://scripts/player.gd" id="1_wabmd"]
+[ext_resource type="Script" uid="uid://grby2dloosq5" path="res://scripts/playerRootmotionTUT.gd" id="1_wpmm3"]
 [ext_resource type="PackedScene" uid="uid://pya51ybjpo7q" path="res://characters/geralt/geralt.glb" id="2_ig8p6"]
-[ext_resource type="PackedScene" uid="uid://bkq8dh6gk5r4y" path="res://characters/geralt/geralt_z_mixamo.glb" id="3_ig8p6"]
+[ext_resource type="PackedScene" uid="uid://bshta4ds76tvg" path="res://characters/geralt/geralt_anim_testglb.glb" id="3_ig8p6"]
+[ext_resource type="Script" uid="uid://b0ir5uvxefavd" path="res://scripts/CamerasController.gd" id="3_wpmm3"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ig8p6"]
+animation = &"walk_forward"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wpmm3"]
+animation = &"walk_back"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_n1p3x"]
+animation = &"walk_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_iba7y"]
+animation = &"walk_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_g36bq"]
+animation = &"sprint"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_g36bq"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_ig8p6")
+blend_point_0/pos = Vector2(0, -0.5)
+blend_point_1/node = SubResource("AnimationNodeAnimation_wpmm3")
+blend_point_1/pos = Vector2(0, 1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_n1p3x")
+blend_point_2/pos = Vector2(-1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_iba7y")
+blend_point_3/pos = Vector2(1, 0)
+blend_point_4/node = SubResource("AnimationNodeAnimation_g36bq")
+blend_point_4/pos = Vector2(0, -1)
+sync = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uedrm"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bjl3n"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wd0ba"]
+xfade_time = 0.2
+advance_mode = 2
+advance_condition = &"movement"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rjgie"]
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_x1ndo"]
+states/Walk/node = SubResource("AnimationNodeBlendSpace2D_g36bq")
+states/Walk/position = Vector2(561.99994, 98.5106)
+states/idle/node = SubResource("AnimationNodeAnimation_uedrm")
+states/idle/position = Vector2(336.4, 99.424)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_bjl3n"), "idle", "Walk", SubResource("AnimationNodeStateMachineTransition_wd0ba"), "Walk", "idle", SubResource("AnimationNodeStateMachineTransition_rjgie")]
+graph_offset = Vector2(65, -1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yldxj"]
 radius = 0.25732422
 height = 1.6273804
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wpmm3"]
-animation = &"mixamo_com"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n1p3x"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_iba7y"]
-states/Walk/node = SubResource("AnimationNodeAnimation_wpmm3")
-states/Walk/position = Vector2(457.99997, 91.88)
-transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_n1p3x")]
-graph_offset = Vector2(60, -3)
-
 [node name="Player" type="CharacterBody3D" unique_id=1559639367]
-script = ExtResource("1_wabmd")
+script = ExtResource("1_wpmm3")
 
 [node name="geralt" parent="." unique_id=1714212613 instance=ExtResource("2_ig8p6")]
-
-[node name="geralt_z_mixamo" parent="." unique_id=772937080 instance=ExtResource("3_ig8p6")]
 visible = false
 
-[node name="Skeleton3D" parent="geralt_z_mixamo/Armature" parent_id_path=PackedInt32Array(772937080, 1565443110) index="0" unique_id=344705701]
-bones/0/position = Vector3(-0.00024671666, 0.84149146, -0.0020815507)
-bones/0/rotation = Quaternion(0.0085100345, 0.023574969, -0.012062078, 0.9996131)
-bones/1/rotation = Quaternion(-0.058814015, 0.0030096062, 0.001360196, 0.99826354)
-bones/2/rotation = Quaternion(0.0033856153, 0.0054564793, 0.005053824, 0.9999666)
-bones/3/rotation = Quaternion(0.0033856959, 0.00545649, 0.00505382, 0.9999666)
-bones/4/rotation = Quaternion(0.06059607, -0.0033333264, -0.010763902, 0.9980988)
-bones/5/rotation = Quaternion(0.023500552, -0.0268053, 0.016007349, 0.9992362)
-bones/7/rotation = Quaternion(0.7205416, 0.27107763, -0.4946568, 0.4033008)
-bones/8/rotation = Quaternion(0.32759753, 0.025951916, -0.07245486, 0.94167763)
-bones/9/rotation = Quaternion(0.025783481, 0.16764942, 0.2769394, 0.9457978)
-bones/11/rotation = Quaternion(0.58034736, -0.39223018, 0.6368789, 0.3220834)
-bones/12/rotation = Quaternion(0.33451626, 0.09657399, 0.15351334, 0.9247736)
-bones/13/rotation = Quaternion(0.16547991, -0.12859559, -0.16374099, 0.96398574)
-bones/15/rotation = Quaternion(0.066317104, 0.17456126, 0.98073816, -0.057298545)
-bones/16/rotation = Quaternion(-0.5535081, 0.010988805, -0.029665643, 0.83224285)
-bones/17/rotation = Quaternion(0.5276242, -0.13557142, 0.10994937, 0.83135086)
-bones/18/rotation = Quaternion(0.3440169, -0.058696557, 0.004901826, 0.93711424)
-bones/20/rotation = Quaternion(-0.07133629, 0.102654554, 0.99190456, -0.02232816)
-bones/21/rotation = Quaternion(-0.21966274, -0.07007114, 0.036074504, 0.97238725)
-bones/22/rotation = Quaternion(0.5527842, 0.10077261, -0.16631916, 0.8103163)
-bones/23/rotation = Quaternion(0.35712633, 0.10635684, -0.030646576, 0.92747504)
+[node name="geralt_anim_testglb" parent="." unique_id=769396537 groups=["Character"] instance=ExtResource("3_ig8p6")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="Skeleton3D" parent="geralt_anim_testglb/Armature" parent_id_path=PackedInt32Array(769396537, 59102032) index="0" unique_id=2142098723]
+bones/1/position = Vector3(0.053341206, 0.84123325, -0.04999116)
+bones/1/rotation = Quaternion(-0.0070049884, -0.0459881, -0.025856638, 0.9985828)
+bones/2/rotation = Quaternion(-0.051515702, 0.0034688911, 0.013449509, 0.9985756)
+bones/3/rotation = Quaternion(0.0181273, 0.0053841337, 0.027448077, 0.99944437)
+bones/4/rotation = Quaternion(0.018127365, 0.005384137, 0.027448092, 0.99944437)
+bones/5/rotation = Quaternion(-0.033921514, -0.0018533402, 0.005694347, 0.9994066)
+bones/6/rotation = Quaternion(0.029632663, 0.0076094004, -0.04834755, 0.998362)
+bones/8/rotation = Quaternion(0.66484964, 0.33621892, -0.51503617, 0.4238744)
+bones/9/rotation = Quaternion(0.42192256, 0.25613, 0.061628662, 0.86751413)
+bones/10/rotation = Quaternion(-0.030420423, -0.008299645, 0.13839291, 0.9898753)
+bones/12/rotation = Quaternion(0.5165436, -0.44691736, 0.6262159, 0.37590048)
+bones/13/rotation = Quaternion(0.40432584, -0.25126374, -0.060781393, 0.87732136)
+bones/14/rotation = Quaternion(0.04651398, 0.005044426, -0.15815048, 0.986306)
+bones/16/rotation = Quaternion(0.025600936, 0.10712721, 0.9900645, -0.08741079)
+bones/17/rotation = Quaternion(-0.16871163, 0.0010282963, -0.038821697, 0.9849002)
+bones/18/rotation = Quaternion(0.46050885, -0.27928925, 0.16567528, 0.82612395)
+bones/19/rotation = Quaternion(0.3048764, -0.07833814, 0.04260217, 0.9482081)
+bones/21/rotation = Quaternion(-0.056330945, 0.020052964, 0.9972817, -0.04306033)
+bones/22/rotation = Quaternion(-0.1280877, -0.00032068187, 0.03599083, 0.99110955)
+bones/23/rotation = Quaternion(0.51687217, 0.1967378, -0.20051384, 0.8086604)
+bones/24/rotation = Quaternion(0.34573874, 0.08648351, -0.021317124, 0.9340937)
+
+[node name="AnimationPlayer" parent="geralt_anim_testglb" index="1" unique_id=1588642269]
+root_motion_track = NodePath("Armature/Skeleton3D:ROOT")
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=371884286]
+root_node = NodePath("../geralt_anim_testglb")
+root_motion_track = NodePath("Armature/Skeleton3D:ROOT")
+tree_root = SubResource("AnimationNodeStateMachine_x1ndo")
+anim_player = NodePath("../geralt_anim_testglb/AnimationPlayer")
+parameters/conditions/idle = false
+parameters/conditions/movement = false
+parameters/Walk/blend_position = Vector2(-0.049420834, 0.39184952)
+
+[node name="RootMotionView" type="RootMotionView" parent="." unique_id=874324356]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+animation_path = NodePath("../AnimationTree")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1980983315]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8530011, 0)
 shape = SubResource("CapsuleShape3D_yldxj")
 
-[node name="Head" type="Node3D" parent="." unique_id=1601329862]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5238149, -0.16627425)
+[node name="cameras" type="Node3D" parent="." unique_id=1652656274 groups=["CameraController"]]
+script = ExtResource("3_wpmm3")
 
-[node name="FPS_Camera" type="Camera3D" parent="Head" unique_id=73431443]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0690406)
+[node name="Head" type="Node3D" parent="cameras" unique_id=1601329862]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -0.055796802, 1.5238149, 0.1664454)
 
-[node name="CamPivot" type="Node3D" parent="." unique_id=1560400568]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2296325, 0)
+[node name="FPS_Camera" type="Camera3D" parent="cameras/Head" unique_id=73431443]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.111311175, 0, -0.036943898)
+fov = 45.0
 
-[node name="SpringArm3D" type="SpringArm3D" parent="CamPivot" unique_id=1399211772]
+[node name="CamPivot" type="Node3D" parent="cameras" unique_id=1560400568]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.2296325, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="cameras/CamPivot" unique_id=1399211772]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.555, 0.005, 0.405)
 
-[node name="TPS_Camera" type="Camera3D" parent="CamPivot/SpringArm3D" unique_id=973292849]
+[node name="TPS_Camera" type="Camera3D" parent="cameras/CamPivot/SpringArm3D" unique_id=973292849]
 fov = 55.0
 
-[node name="AnimationTree" type="AnimationTree" parent="." unique_id=454269269]
-root_node = NodePath("../geralt_z_mixamo")
-root_motion_track = NodePath("Armature/Skeleton3D:mixamorig_Hips")
-tree_root = SubResource("AnimationNodeStateMachine_iba7y")
-anim_player = NodePath("../geralt_z_mixamo/AnimationPlayer")
-
-[node name="RootMotionView" type="RootMotionView" parent="." unique_id=1797462234]
-animation_path = NodePath("../AnimationTree")
-
-[editable path="geralt_z_mixamo"]
+[editable path="geralt_anim_testglb"]
