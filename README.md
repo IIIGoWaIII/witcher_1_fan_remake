@@ -1,6 +1,6 @@
-# Witcher 1 Fan Remake
+# Witcher 1 Fan Visual Remake
 
-A fan remake of the classic Witcher 1 game built using the **Godot 4** engine.
+A fan visual remake of the classic Witcher 1 game built using the **Godot 4** engine.
 
 ## Features
 
