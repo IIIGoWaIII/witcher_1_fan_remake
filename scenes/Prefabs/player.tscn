@@ -40,12 +40,12 @@ animation = &"idle"
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wd0ba"]
-xfade_time = 0.5
+xfade_time = 0.15
 advance_mode = 2
 advance_condition = &"movement"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rjgie"]
-xfade_time = 0.5
+xfade_time = 0.15
 advance_mode = 2
 advance_condition = &"idle"
 

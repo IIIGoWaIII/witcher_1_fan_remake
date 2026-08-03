@@ -3,8 +3,6 @@ extends SkeletonModifier3D
 ## Must be a child of a Skeleton3D node.  Runs inside the skeleton's
 ## modifier pipeline (after AnimationTree) via _process_modification_with_delta().
 
-const MAX_LOOK_ANGLE := deg_to_rad(45.0)
-
 var look_speed: float = 8.0
 
 # Target angles set by the player script each frame
