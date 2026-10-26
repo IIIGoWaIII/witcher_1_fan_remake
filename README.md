@@ -20,7 +20,10 @@ A fan visual remake of the classic Witcher 1 game built using the **Godot 4** en
 
 ## Development
 
-This project is in its early stages. Currently, basic movement and camera systems are implemented.
+The Witcher 1 asset pipeline (containers, MDB models, GIT placement, baked
+lightmaps) and the Vizima Outskirts area are documented in
+[docs/witcher1-pipeline.md](docs/witcher1-pipeline.md). The area scene is
+`scenes/areas/vizima_outskirts.tscn`.
 
 ### Prerequisites
 

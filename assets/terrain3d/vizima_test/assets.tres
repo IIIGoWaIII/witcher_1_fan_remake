@@ -1,0 +1,260 @@
+[gd_resource type="Terrain3DAssets" format=3 uid="uid://b5t7h4amc7nyt"]
+
+[ext_resource type="Shader" uid="uid://8x06li36uisy" path="res://shaders/w1_grass.gdshader" id="1_52b07"]
+[ext_resource type="Texture2D" uid="uid://b7s51emmch46c" path="res://assets/witcher1/textures/trw_set3.png" id="2_ms5io"]
+[ext_resource type="PackedScene" path="res://assets/terrain3d/vizima_test/grass/trawa_set07.tscn" id="3_mej3y"]
+[ext_resource type="Texture2D" uid="uid://fxdk2gxlwcj6" path="res://assets/witcher1/textures/trw_set1_b3.png" id="4_ijnnr"]
+[ext_resource type="PackedScene" path="res://assets/terrain3d/vizima_test/grass/trawa_set03.tscn" id="5_bb6gn"]
+[ext_resource type="Texture2D" uid="uid://b8w5aqveptsmt" path="res://assets/witcher1/textures/trw_set_zyto2.png" id="6_i4i1h"]
+[ext_resource type="PackedScene" path="res://assets/terrain3d/vizima_test/grass/trawa_set09.tscn" id="7_lh7te"]
+[ext_resource type="Texture2D" uid="uid://dus4le7eorjm5" path="res://assets/witcher1/textures/trw_set_zyto.png" id="8_gn1t4"]
+[ext_resource type="PackedScene" path="res://assets/terrain3d/vizima_test/grass/trawa_set08.tscn" id="9_4exra"]
+[ext_resource type="Texture2D" uid="uid://d1s0c005qoape" path="res://assets/witcher1/textures/trw_set1_b5.png" id="10_fj2r5"]
+[ext_resource type="PackedScene" path="res://assets/terrain3d/vizima_test/grass/trawa_set05.tscn" id="11_cnj2r"]
+[ext_resource type="Texture2D" uid="uid://bn4jgoiddv0c3" path="res://assets/terrain3d/vizima_test/textures/szablon.png" id="12_cf5i3"]
+[ext_resource type="Texture2D" uid="uid://cee2bfcn4ta1k" path="res://assets/terrain3d/vizima_test/textures/flat_normal.png" id="13_rftvx"]
+[ext_resource type="Texture2D" uid="uid://1dg166ijr0jo" path="res://assets/terrain3d/vizima_test/textures/trn_blotoB_01.png" id="14_rprno"]
+[ext_resource type="Texture2D" uid="uid://bowfx8c0paah7" path="res://assets/terrain3d/vizima_test/textures/trn_blotod_06.png" id="15_8wj04"]
+[ext_resource type="Texture2D" uid="uid://c62sms54vdj4g" path="res://assets/terrain3d/vizima_test/textures/trn_bruk_08.png" id="16_7j4bo"]
+[ext_resource type="Texture2D" uid="uid://ypkugib6ceyh" path="res://assets/terrain3d/vizima_test/textures/trn_bruk_11.png" id="17_gqwo0"]
+[ext_resource type="Texture2D" uid="uid://f7fo5osau6m7" path="res://assets/terrain3d/vizima_test/textures/trn_dno_03.png" id="18_eqdp3"]
+[ext_resource type="Texture2D" uid="uid://ce8knor44ndme" path="res://assets/terrain3d/vizima_test/textures/trn_piach_03.png" id="19_qpswe"]
+[ext_resource type="Texture2D" uid="uid://cko7amuqdbwco" path="res://assets/terrain3d/vizima_test/textures/trn_porosty_03.png" id="20_4wng0"]
+[ext_resource type="Texture2D" uid="uid://cc67y3tc50riu" path="res://assets/terrain3d/vizima_test/textures/trn_sciolka_01.png" id="21_bqq5a"]
+[ext_resource type="Texture2D" uid="uid://cvtn1i3nboyf6" path="res://assets/terrain3d/vizima_test/textures/trn_skaly_15.png" id="22_q2o2u"]
+[ext_resource type="Texture2D" uid="uid://dvnivns6xjwq0" path="res://assets/terrain3d/vizima_test/textures/trn_skarpa_01.png" id="23_vsxgr"]
+[ext_resource type="Texture2D" uid="uid://l5tpx22nha6a" path="res://assets/terrain3d/vizima_test/textures/trn_skarpa_02.png" id="24_ujqhd"]
+[ext_resource type="Texture2D" uid="uid://bu1h0r1aqyce8" path="res://assets/terrain3d/vizima_test/textures/trn_trawa_01.png" id="25_arsy7"]
+[ext_resource type="Texture2D" uid="uid://bauubsfuyrked" path="res://assets/terrain3d/vizima_test/textures/trn_trawa_03.png" id="26_he8y1"]
+[ext_resource type="Texture2D" uid="uid://dhwcxvmpcddd5" path="res://assets/terrain3d/vizima_test/textures/trn_trawa_04.png" id="27_ekchp"]
+[ext_resource type="Texture2D" uid="uid://m7gdachblypa" path="res://assets/terrain3d/vizima_test/textures/trn_trawa_05.png" id="28_jk0eo"]
+[ext_resource type="Texture2D" uid="uid://betrry35v6ysx" path="res://assets/terrain3d/vizima_test/textures/trn_trawa_06.png" id="29_1mw2w"]
+[ext_resource type="Texture2D" uid="uid://7gdwx7x1w3ps" path="res://assets/terrain3d/vizima_test/textures/trn_ziemSkiby_02.png" id="30_vvdod"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j46ou"]
+render_priority = 0
+shader = ExtResource("1_52b07")
+shader_parameter/d0 = ExtResource("2_ms5io")
+shader_parameter/tint = Color(0.588, 0.588, 0.588, 1)
+shader_parameter/light = 1.0
+shader_parameter/sway = 0.05
+shader_parameter/wind_speed = 1.4
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_jgyfs"]
+name = "trawa_set07"
+scene_file = ExtResource("3_mej3y")
+density = 1.0
+cast_shadows = 0
+material_override = SubResource("ShaderMaterial_j46ou")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 200.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f15yh"]
+render_priority = 0
+shader = ExtResource("1_52b07")
+shader_parameter/d0 = ExtResource("4_ijnnr")
+shader_parameter/tint = Color(0.588, 0.588, 0.588, 1)
+shader_parameter/light = 1.0
+shader_parameter/sway = 0.05
+shader_parameter/wind_speed = 1.4
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_g1v3e"]
+name = "trawa_set03"
+id = 1
+scene_file = ExtResource("5_bb6gn")
+density = 1.0
+cast_shadows = 0
+material_override = SubResource("ShaderMaterial_f15yh")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 200.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qa12s"]
+render_priority = 0
+shader = ExtResource("1_52b07")
+shader_parameter/d0 = ExtResource("6_i4i1h")
+shader_parameter/tint = Color(0.588, 0.588, 0.588, 1)
+shader_parameter/light = 1.0
+shader_parameter/sway = 0.05
+shader_parameter/wind_speed = 1.4
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_vu5lc"]
+name = "trawa_set09"
+id = 2
+scene_file = ExtResource("7_lh7te")
+density = 1.0
+cast_shadows = 0
+material_override = SubResource("ShaderMaterial_qa12s")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 200.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0hmjv"]
+render_priority = 0
+shader = ExtResource("1_52b07")
+shader_parameter/d0 = ExtResource("8_gn1t4")
+shader_parameter/tint = Color(0.588, 0.588, 0.588, 1)
+shader_parameter/light = 1.0
+shader_parameter/sway = 0.05
+shader_parameter/wind_speed = 1.4
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_mijt8"]
+name = "trawa_set08"
+id = 3
+scene_file = ExtResource("9_4exra")
+density = 1.0
+cast_shadows = 0
+material_override = SubResource("ShaderMaterial_0hmjv")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 200.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d8oxn"]
+render_priority = 0
+shader = ExtResource("1_52b07")
+shader_parameter/d0 = ExtResource("10_fj2r5")
+shader_parameter/tint = Color(0.588, 0.588, 0.588, 1)
+shader_parameter/light = 1.0
+shader_parameter/sway = 0.05
+shader_parameter/wind_speed = 1.4
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_npiu4"]
+name = "trawa_set05"
+id = 4
+scene_file = ExtResource("11_cnj2r")
+density = 1.0
+cast_shadows = 0
+material_override = SubResource("ShaderMaterial_d8oxn")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 200.0
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_72p4d"]
+name = "szablon"
+albedo_texture = ExtResource("12_cf5i3")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_2kfs5"]
+name = "trn_blotoB_01"
+id = 1
+albedo_texture = ExtResource("14_rprno")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_ffskb"]
+name = "trn_blotod_06"
+id = 2
+albedo_texture = ExtResource("15_8wj04")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_31ue4"]
+name = "trn_bruk_08"
+id = 3
+albedo_texture = ExtResource("16_7j4bo")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_kc7ed"]
+name = "trn_bruk_11"
+id = 4
+albedo_texture = ExtResource("17_gqwo0")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_ip54u"]
+name = "trn_dno_03"
+id = 5
+albedo_texture = ExtResource("18_eqdp3")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_3sbnj"]
+name = "trn_piach_03"
+id = 6
+albedo_texture = ExtResource("19_qpswe")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_t7o5h"]
+name = "trn_porosty_03"
+id = 7
+albedo_texture = ExtResource("20_4wng0")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_axcim"]
+name = "trn_sciolka_01"
+id = 8
+albedo_texture = ExtResource("21_bqq5a")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_iliw8"]
+name = "trn_skaly_15"
+id = 9
+albedo_texture = ExtResource("22_q2o2u")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_g5gr8"]
+name = "trn_skarpa_01"
+id = 10
+albedo_texture = ExtResource("23_vsxgr")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_f0fnj"]
+name = "trn_skarpa_02"
+id = 11
+albedo_texture = ExtResource("24_ujqhd")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_h7a6a"]
+name = "trn_trawa_01"
+id = 12
+albedo_texture = ExtResource("25_arsy7")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_g6ac7"]
+name = "trn_trawa_03"
+id = 13
+albedo_texture = ExtResource("26_he8y1")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_yfduy"]
+name = "trn_trawa_04"
+id = 14
+albedo_texture = ExtResource("27_ekchp")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_1ydia"]
+name = "trn_trawa_05"
+id = 15
+albedo_texture = ExtResource("28_jk0eo")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_p1e7a"]
+name = "trn_trawa_06"
+id = 16
+albedo_texture = ExtResource("29_1mw2w")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_fcp14"]
+name = "trn_ziemSkiby_02"
+id = 17
+albedo_texture = ExtResource("30_vvdod")
+normal_texture = ExtResource("13_rftvx")
+uv_scale = 0.5
+
+[resource]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_jgyfs"), SubResource("Terrain3DMeshAsset_g1v3e"), SubResource("Terrain3DMeshAsset_vu5lc"), SubResource("Terrain3DMeshAsset_mijt8"), SubResource("Terrain3DMeshAsset_npiu4")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_72p4d"), SubResource("Terrain3DTextureAsset_2kfs5"), SubResource("Terrain3DTextureAsset_ffskb"), SubResource("Terrain3DTextureAsset_31ue4"), SubResource("Terrain3DTextureAsset_kc7ed"), SubResource("Terrain3DTextureAsset_ip54u"), SubResource("Terrain3DTextureAsset_3sbnj"), SubResource("Terrain3DTextureAsset_t7o5h"), SubResource("Terrain3DTextureAsset_axcim"), SubResource("Terrain3DTextureAsset_iliw8"), SubResource("Terrain3DTextureAsset_g5gr8"), SubResource("Terrain3DTextureAsset_f0fnj"), SubResource("Terrain3DTextureAsset_h7a6a"), SubResource("Terrain3DTextureAsset_g6ac7"), SubResource("Terrain3DTextureAsset_yfduy"), SubResource("Terrain3DTextureAsset_1ydia"), SubResource("Terrain3DTextureAsset_p1e7a"), SubResource("Terrain3DTextureAsset_fcp14")])

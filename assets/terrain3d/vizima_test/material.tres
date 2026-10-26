@@ -1,0 +1,8 @@
+[gd_resource type="Terrain3DMaterial" format=3 uid="uid://oefxkytwcne4"]
+
+[ext_resource type="Shader" uid="uid://b7d87ykbvp65q" path="res://shaders/w1_terrain3d.gdshader" id="1_louny"]
+
+[resource]
+world_background = 0
+shader_override_enabled = true
+shader_override = ExtResource("1_louny")

@@ -1,0 +1,30 @@
+{
+ "assets": [
+  "RaspberryShrub_5",
+  "DeciduousShrub_27",
+  "HollyShrub_4",
+  "ConiferousShrub_16",
+  "Birch1_20",
+  "PineTree_19",
+  "Birch2_21",
+  "Oak_25",
+  "AshTree_1",
+  "Maple_24",
+  "Birch3_26",
+  "FirTree_17",
+  "NobleFirTree_18",
+  "DeciduousShrub2_31",
+  "PlumTree_3",
+  "AppleTree_0",
+  "DeciduousDead1_29",
+  "BirchOrange1_22",
+  "DeciduousSapling2_33",
+  "Coniferous Dead Tree_13",
+  "CherryTree_2",
+  "DeciduousSapling_32",
+  "BirchOrange2_23"
+ ],
+ "count": 2813,
+ "tree_scale": 0.8,
+ "bush_scale": 0.3
+}

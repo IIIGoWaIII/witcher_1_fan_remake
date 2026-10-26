@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/terrain3d/vizima_test/grass/trawa_set05_mesh.res" id="1_e7b4r"]
+
+[node name="trawa_set05" type="MeshInstance3D" unique_id=351825049]
+mesh = ExtResource("1_e7b4r")

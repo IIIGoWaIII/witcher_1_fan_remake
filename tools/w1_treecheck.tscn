@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://tools/w1_treecheck.gd" id="1_treecheck"]
+
+[node name="W1TreeCheck" type="Node3D"]
+script = ExtResource("1_treecheck")

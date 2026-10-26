@@ -1,0 +1,59 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cjvvba7bge4al"
+path="res://.godot/imported/house_010.glb-d2cfe000a258f9197353e17e001735e2.scn"
+
+[deps]
+
+source_file="res://assets/hosues/house_010.glb"
+dest_files=["res://.godot/imported/house_010.glb-d2cfe000a258f9197353e17e001735e2.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=false
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"nodes": {
+"PATH:barn_LOD0": {
+"generate/physics": true,
+"mesh_instance/visibility_range_end": 100.0,
+"mesh_instance/visibility_range_fade_mode": 1
+},
+"PATH:barn_LOD1": {
+"generate/physics": true,
+"mesh_instance/visibility_range_begin": 90.0,
+"mesh_instance/visibility_range_end": 250.0
+},
+"PATH:barn_LOD2": {
+"generate/physics": true,
+"mesh_instance/visibility_range_begin": 240.0
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1

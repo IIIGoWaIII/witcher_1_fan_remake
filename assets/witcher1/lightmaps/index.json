@@ -1,0 +1,196 @@
+{
+ "arc_drewnsuch": {
+  "d": "arc_drewnsuch",
+  "n": "arc_drewnsuch",
+  "p": "arc_drewnsuch",
+  "r": "arc_drewnsuch",
+  "w": "arc_drewnsuch"
+ },
+ "arc_drewnsupal": {
+  "d": "arc_drewnsupal",
+  "n": "arc_drewnsupal",
+  "p": "arc_drewnsupal",
+  "r": "arc_drewnsupal",
+  "w": "arc_drewnsupal"
+ },
+ "arc_kapliczka_1": {
+  "d": "arc_kapliczka_1",
+  "n": "arc_kapliczka_1",
+  "p": "arc_kapliczka_1",
+  "r": "arc_kapliczka_1",
+  "w": "arc_kapliczka_1"
+ },
+ "fx_czarna4x4": {
+  "d": "fx_czarna4x4",
+  "n": "fx_czarna4x4",
+  "p": "fx_czarna4x4",
+  "r": "fx_czarna4x4",
+  "w": "fx_czarna4x4"
+ },
+ "fx_geometria": {
+  "d": "fx_geometria",
+  "n": "fx_geometria",
+  "p": "fx_geometria",
+  "r": "fx_geometria",
+  "w": "fx_geometria"
+ },
+ "l09_drzwi": {
+  "n": "l09_drzwi_n",
+  "p": "l09_drzwi_p",
+  "r": "l09_drzwi_r",
+  "w": "l09_drzwi_w"
+ },
+ "l09_mury00": {
+  "n": "l09_mury00_n",
+  "p": "l09_mury00_p",
+  "r": "l09_mury00_r",
+  "w": "l09_mury00_w"
+ },
+ "l09_mury01": {
+  "n": "l09_mury01_n",
+  "p": "l09_mury01_p",
+  "r": "l09_mury01_r",
+  "w": "l09_mury01_w"
+ },
+ "l09_mury02": {
+  "n": "l09_mury02_n",
+  "p": "l09_mury02_p",
+  "r": "l09_mury02_r",
+  "w": "l09_mury02_w"
+ },
+ "l09_otocz": {
+  "n": "l09_otocz_n",
+  "p": "l09_otocz_p",
+  "r": "l09_otocz_r",
+  "w": "l09_otocz_w"
+ },
+ "l09_tera00": {
+  "n": "l09_tera00_n",
+  "p": "l09_tera00_p",
+  "r": "l09_tera00_r",
+  "w": "l09_tera00_w"
+ },
+ "l09_tera01": {
+  "n": "l09_tera01_n",
+  "p": "l09_tera01_p",
+  "r": "l09_tera01_r",
+  "w": "l09_tera01_w"
+ },
+ "l09_terb00": {
+  "n": "l09_terb00_n",
+  "p": "l09_terb00_p",
+  "r": "l09_terb00_r",
+  "w": "l09_terb00_w"
+ },
+ "l09_terb01": {
+  "n": "l09_terb01_n",
+  "p": "l09_terb01_p",
+  "r": "l09_terb01_r",
+  "w": "l09_terb01_w"
+ },
+ "ob_aardstone01": {
+  "d": "ob_aardstone01",
+  "n": "ob_aardstone01",
+  "p": "ob_aardstone01",
+  "r": "ob_aardstone01",
+  "w": "ob_aardstone01"
+ },
+ "ob_boardsma01": {
+  "d": "ob_boardsma01",
+  "n": "ob_boardsma01",
+  "p": "ob_boardsma01",
+  "r": "ob_boardsma01",
+  "w": "ob_boardsma01"
+ },
+ "ob_boardsma03": {
+  "d": "ob_boardsma03",
+  "n": "ob_boardsma03",
+  "p": "ob_boardsma03",
+  "r": "ob_boardsma03",
+  "w": "ob_boardsma03"
+ },
+ "ob_boardsma04": {
+  "d": "ob_boardsma04",
+  "n": "ob_boardsma04",
+  "p": "ob_boardsma04",
+  "r": "ob_boardsma04",
+  "w": "ob_boardsma04"
+ },
+ "ob_caulold01": {
+  "d": "ob_caulold01",
+  "n": "ob_caulold01",
+  "p": "ob_caulold01",
+  "r": "ob_caulold01",
+  "w": "ob_caulold01"
+ },
+ "ob_contbox01": {
+  "d": "ob_contbox01",
+  "n": "ob_contbox01",
+  "p": "ob_contbox01",
+  "r": "ob_contbox01",
+  "w": "ob_contbox01"
+ },
+ "ob_contbox02": {
+  "d": "ob_contbox02",
+  "n": "ob_contbox02",
+  "p": "ob_contbox02",
+  "r": "ob_contbox02",
+  "w": "ob_contbox02"
+ },
+ "ob_efire01": {
+  "d": "ob_efire01",
+  "n": "ob_efire01",
+  "p": "ob_efire01",
+  "r": "ob_efire01",
+  "w": "ob_efire01"
+ },
+ "ob_goodsbar01": {
+  "d": "ob_goodsbar01",
+  "n": "ob_goodsbar01",
+  "p": "ob_goodsbar01",
+  "r": "ob_goodsbar01",
+  "w": "ob_goodsbar01"
+ },
+ "ob_magstone01": {
+  "d": "ob_magstone01",
+  "n": "ob_magstone01",
+  "p": "ob_magstone01",
+  "r": "ob_magstone01",
+  "w": "ob_magstone01"
+ },
+ "ob_magstone03": {
+  "d": "ob_magstone03",
+  "n": "ob_magstone03",
+  "p": "ob_magstone03",
+  "r": "ob_magstone03",
+  "w": "ob_magstone03"
+ },
+ "ob_maus01": {
+  "d": "ob_maus01",
+  "n": "ob_maus01",
+  "p": "ob_maus01",
+  "r": "ob_maus01",
+  "w": "ob_maus01"
+ },
+ "ob_trophy01": {
+  "d": "ob_trophy01",
+  "n": "ob_trophy01",
+  "p": "ob_trophy01",
+  "r": "ob_trophy01",
+  "w": "ob_trophy01"
+ },
+ "ob_waterwheel_01": {
+  "d": "ob_waterwheel_01",
+  "n": "ob_waterwheel_01",
+  "p": "ob_waterwheel_01",
+  "r": "ob_waterwheel_01",
+  "w": "ob_waterwheel_01"
+ },
+ "obj_kamloty": {
+  "d": "obj_kamloty",
+  "n": "obj_kamloty",
+  "p": "obj_kamloty",
+  "r": "obj_kamloty",
+  "w": "obj_kamloty"
+ }
+}

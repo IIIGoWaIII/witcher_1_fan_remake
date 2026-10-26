@@ -1,0 +1,58 @@
+{
+ "height": {
+  "file": "height.r32",
+  "x0": 1024.0,
+  "z0": -2048.0,
+  "width": 2048,
+  "height": 1024,
+  "spacing": 1.0
+ },
+ "control": {
+  "file": "control.r32",
+  "x0": 1024.0,
+  "z0": -2048.0,
+  "width": 2048,
+  "height": 1024,
+  "spacing": 1.0
+ },
+ "color": {
+  "file": "color.rgba",
+  "x0": 1024.0,
+  "z0": -2048.0,
+  "width": 2048,
+  "height": 1024,
+  "spacing": 1.0
+ },
+ "lightmap": {
+  "file": "lightmap_p.png",
+  "x0": 1280.0,
+  "z0": -2048.0,
+  "width": 2560,
+  "height": 2048,
+  "spacing": 0.5
+ },
+ "textures": [
+  "szablon",
+  "trn_blotoB_01",
+  "trn_blotod_06",
+  "trn_bruk_08",
+  "trn_bruk_11",
+  "trn_dno_03",
+  "trn_piach_03",
+  "trn_porosty_03",
+  "trn_sciolka_01",
+  "trn_skaly_15",
+  "trn_skarpa_01",
+  "trn_skarpa_02",
+  "trn_trawa_01",
+  "trn_trawa_03",
+  "trn_trawa_04",
+  "trn_trawa_05",
+  "trn_trawa_06",
+  "trn_ziemSkiby_02"
+ ],
+ "texture_uv_scale": 0.5,
+ "region_size": 1024,
+ "vertex_spacing": 1.0,
+ "ambient": 0.15
+}
